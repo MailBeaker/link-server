@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+                <div class="panel static-panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="centered">{{ title }}</h1>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <i class="fa fa-envelope-o envelope-icon"></i>
+                                </div>
+                                <div class="col-lg-9" style="margin-top: 30px;">
+                                    <p>MailBeaker is a cloud service that protects your inbox from phishing attacks.</p>
+                                    <p>Your organization's IT administrator has asked us to warn you to be extra careful before letting you access this website. Be weary of any requests for information or prompts to download or run software. If the website asks you to login, double-check the address bar and ensure that it's really a website that you trust.</p><br />
+                                    <p><strong>Destination:</strong> {{ redirect_url }}</p>
+                                    <a href="{{ redirect_url }}" class="btn btn-med btn-danger">Continue anyway</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        If you have any questions, please contact your administrator for further assistance.
+                    </div>
+                </div>
+
+{% endblock %}

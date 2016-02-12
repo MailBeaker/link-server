@@ -1,0 +1,23 @@
+language: python
+
+python:
+  - 3.4
+
+env:
+  - BEAKER_API_USERNAME=test BEAKER_API_PASSWORD=test APP_NAME=mb-link-dev
+
+install:
+  - sudo apt-get install python-dev libffi-dev libssl-dev git
+  - pip install -r requirements_dev.txt
+
+before_script:
+  - mkdir -p shippable/codecoverage
+  - mkdir -p shippable/testresults
+  - cp settingslocal.py.test settingslocal.py
+
+script:
+  - nosetests --with-xunit --xunit-file=shippable/testresults/nosetests.xml --with-coverage --cover-package=./ --cover-xml --cover-xml-file=shippable/codecoverage/coverage.xml --cover-branches
+
+#after_success:
+#  - git push git@github.com:$APP_NAME.git master
+

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+                <div class="panel static-panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="centered">{{ title }}</h1>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <i class="fa fa-envelope-o envelope-icon"></i>
+                                </div>
+                                <div class="col-lg-9" style="margin-top: 30px;">
+                                    <p><strong>MailBeaker does not recognize this link. Please use extreme caution.</strong></p>
+                                    <p>We're sorry, but something is wrong. We don't recall seeing this link go through our systems.</p>
+                                    <p>The URL specified below has not been checked by MailBeaker, and we recommend that you turn back immediately without proceeding.</p><br />
+                                    <p><strong>Destination:</strong> {{ redirect_url }}</p>
+                                    <a href="{{ redirect_url }}" class="btn btn-med btn-danger">Continue anyway</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        If you have any questions, please contact support@mailbeaker.com for further assistance.
+                    </div>
+                </div>
+
+{% endblock %}

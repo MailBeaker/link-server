@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+                <div class="panel static-panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="centered">{{ title }}</h1>
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <i class="fa fa-envelope-o envelope-icon"></i>
+                                </div>
+                                <div class="col-lg-9" style="margin-top: 30px;">
+                                    <p>Well, this is embarrassing. MailBeaker is unable to retrieve information about the link you've requested.</p><br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        If you have any questions, please contact support@mailbeaker.com for further assistance.
+                    </div>
+                </div>
+
+{% endblock %}
